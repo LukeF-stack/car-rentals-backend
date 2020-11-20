@@ -1,2 +1,2 @@
-# car-rentals-backend
+# japan-snow-backend
 Created with CodeSandbox
