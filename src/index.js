@@ -29,14 +29,11 @@ app.use(function (req, res, next) {
 
 // 3. Database Connection --------------------------------
 mongoose
-  .connect(
-    "mongodb://16d1c4790df1fbf93da272bc28c6f8c9:sunbug62@10b.mongo.evennode.com:27017/16d1c4790df1fbf93da272bc28c6f8c9",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: false
-    }
-  )
+  .connect(process.env.DATABASE_CONNECT, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+  })
   .then(() => {
     console.log("Connected to the mongodb");
   })
